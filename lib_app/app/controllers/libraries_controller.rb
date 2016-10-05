@@ -13,9 +13,13 @@ class LibrariesController < ApplicationController
     redirect_to libraries_path
   end
 
+  def show
+    @library = Library.find_by_id(library_params)
+  end
+
 
   private
   def library_params
-    params.require(:library).require(:name, :floor_count, :floor_area)
+    params.require(:library).permit(:name, :floor_count, :floor_area)
   end
 end
