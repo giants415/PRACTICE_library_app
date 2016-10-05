@@ -1,0 +1,7 @@
+<h2><%= @user.first_name %> is a member of these libraries </h2>
+<br>
+<ul>
+  <% @libraries.each do |lib| %>
+    <li><%= lib.name %></li>
+  <% end %>
+</ul>
