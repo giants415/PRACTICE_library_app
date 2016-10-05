@@ -1,6 +1,9 @@
 <% @libraries.each do |library| %>
   <div>
     <h2><%= library.name %>
+    <% if current_user %>
+      <%= button_to "Join", library_users_path(library) %>
+    <% end %>
   </div>
-  <hr>
+  <br>
 <% end %>
