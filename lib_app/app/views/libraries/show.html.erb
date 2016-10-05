@@ -3,3 +3,5 @@
 <hr>
 <p>This library has <%= @library.floor_count %> floors </p>
 <p>This is the floor area: <%= @library.floor_area %> </p>
+<hr>
+<%= button_to "DELETE LIBRARY", @library, method: :delete %>
