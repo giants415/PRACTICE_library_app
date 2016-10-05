@@ -8,8 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    user_id = params[:id]
-    @user = User.find_by_id(user_id)
+    @user = User.find_by_id(params[:id])
   end
 
   def create
